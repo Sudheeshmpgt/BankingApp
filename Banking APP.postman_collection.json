@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "cdcda4e0-6213-4e38-b239-e3ea3a66cc90",
+		"name": "Banking APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20159838"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sudheesh M\", \r\n    \"email\": \"sudheeshpgt@gmail.com\", \r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/user/new",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"user",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sudheeshpgt@gmail.com\", \r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/user/login",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjM4NDg2Mn0.1kw-R9CT4jMXQ6geBEOU9yANMZceHbz_Ez623r5wS8k",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{localUrl}}/account/get/64843072ad7729be32954204",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"account",
+						"get",
+						"64843072ad7729be32954204"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjM4NDg2Mn0.1kw-R9CT4jMXQ6geBEOU9yANMZceHbz_Ez623r5wS8k",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{localUrl}}/account//transaction/all?userId=64843072ad7729be32954204&skip=0&limit=5",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"account",
+						"",
+						"transaction",
+						"all"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "64843072ad7729be32954204"
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjM4NDg2Mn0.1kw-R9CT4jMXQ6geBEOU9yANMZceHbz_Ez623r5wS8k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"64843072ad7729be32954204\", \r\n    \"accountId\": \"64843072ad7729be32954206\", \r\n    \"amount\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/account/deposit",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"account",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjM4NDg2Mn0.1kw-R9CT4jMXQ6geBEOU9yANMZceHbz_Ez623r5wS8k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"64843072ad7729be32954204\", \r\n    \"accountId\": \"64843072ad7729be32954206\", \r\n    \"amount\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/account/withdraw",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"account",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tranfer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjM4NDg2Mn0.1kw-R9CT4jMXQ6geBEOU9yANMZceHbz_Ez623r5wS8k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"64843072ad7729be32954204\", \r\n    \"accountId\": \"64843072ad7729be32954206\", \r\n    \"amount\": 500,\r\n    \"transferEmail\": \"sudheesh@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localUrl}}/account/transfer",
+					"host": [
+						"{{localUrl}}"
+					],
+					"path": [
+						"account",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localUrl",
+			"value": "http://0.0.0.0:9000/api",
+			"type": "string"
+		},
+		{
+			"key": "access-token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

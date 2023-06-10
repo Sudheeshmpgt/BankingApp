@@ -1,0 +1,10 @@
+.newCard {
+    width: 35rem; 
+    padding: 0;
+}
+@media (max-width: 767px) {
+    .newCard {
+        width:auto;
+        padding: 0;
+    }
+}

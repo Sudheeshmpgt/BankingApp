@@ -1,0 +1,28 @@
+.newCard {
+    width: 35rem; 
+    padding: 0;
+}
+.pagination {
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.pagination > span {
+    padding: 7px 15px;
+    cursor: pointer;
+    border: 1px solid rgb(199, 199, 199);
+}
+.paginationSelected{
+    background-color: #467ed0;
+    color: white;
+}
+.pageDisabled{
+    opacity: 0;
+}
+@media (max-width: 767px) {
+    .newCard {
+        width:auto;
+        padding: 0;
+    }
+}
