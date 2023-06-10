@@ -15,6 +15,8 @@
 <ol>
 <li>Clone the code from this repository</li>
 <li>Use the command 'npm install' inside 'backend' folder to install all the server side dependencies</li>
+<li>Add MONGO_URI: "Your mongodb uri" in your .env file</li>
+<li>Add SECRET_KEY: "Secret key for JWT" in your .env file</li>
 <li>Then use the command 'npm start' to start the server</li>
 <li>Use the command 'npm install' inside 'frontend' folder to install all the client side dependencies</li>
 <li>Then use the command 'npm start' to start the client</li>
